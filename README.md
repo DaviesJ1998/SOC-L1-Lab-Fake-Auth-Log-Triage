@@ -1,4 +1,4 @@
-# SOC L1 Lab — Fake Auth Log Triage (All-in-one)
+# SOC L1 Lab — Fake Auth Log Triage 
 
 **Objective:** Demonstrate basic SOC L1 triage skills on Fedora: create mock logs, search for failed logins with `grep`, simulate escalation/documentation, and clean up files. Everything below is a single markdown you can copy into one file.
 
@@ -37,6 +37,8 @@ Expected output:
 2025-10-26 14:01:00 ERROR: Failed login attempt
 2025-10-26 14:02:00 ERROR: Failed login attempt
 
+---
+
 Step 2 — Analyze log for failed logins
 
 Mimic SOC triage by extracting high-severity lines (ERROR / Failed):
@@ -51,6 +53,8 @@ Example output:
 2025-10-26 14:01:00 ERROR: Failed login attempt
 2025-10-26 14:02:00 ERROR: Failed login attempt
 
+---
+
 Step 3 — Simulate escalation & documentation
 
 Create a simple ticket file to simulate handing off to an L2 analyst:
@@ -64,6 +68,8 @@ cat alert_ticket.txt
 Example output:
 
 Ticket: Failed login spike observed on host X. Triage: L1. Action: escalate to L2 for investigation.
+
+---
 
 Step 4 — Cleanup: remove files and directory
 
@@ -123,6 +129,8 @@ jakedavies@fedora:~$ pwd
 jakedavies@fedora:~$ ls
 soc_project
 jakedavies@fedora:~$ rmdir soc_project
+
+---
 
 Skills demonstrated
 
